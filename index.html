@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Begari Praveen - Full Stack Developer Portfolio">
+    <meta name="keywords" content="Full Stack Developer, Java Developer, Portfolio">
+    <meta name="author" content="Begari Praveen">
+    <title>Begari Praveen | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%235b21b6'>P</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h2>Loading Portfolio...</h2>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Praveen</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">🌙</button>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Praveen</span></h1>
+                <div class="typing-container">
+                    <span class="typing" id="typing">Java Developer</span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Full-Stack Developer with strong backend foundations in Java, Node.js, MySQL, REST APIs, and OOP. 
+                    Passionate about building scalable applications and solving real-world problems.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Get In Touch
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.open('https://github.com/Begari-Praveen')">
+                        View Projects →
+                    </button>
+                </div>
+            </div>
+            <div class="hero-info">
+                <div class="info-card">
+                    <p class="info-label">Location</p>
+                    <p class="info-value">Hyderabad, India</p>
+                </div>
+                <div class="info-card">
+                    <p class="info-label">University</p>
+                    <p class="info-value">Malla Reddy CSE</p>
+                </div>
+                <div class="info-card">
+                    <p class="info-label">CGPA</p>
+                    <p class="info-value">9.04 / 10</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Computer Science Engineering student at Malla Reddy Deemed to be University, passionate about building full-stack applications and solving complex problems. With a strong foundation in Java, backend development, and database design, I focus on creating scalable, secure applications that make a real impact.
+                    </p>
+                    <p>
+                        My journey in software development has been driven by curiosity and a desire to master both frontend and backend technologies. I'm particularly interested in system design, API architecture, and building applications that can handle real-world challenges.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <span class="highlight-label">University:</span>
+                            <span class="highlight-value">Malla Reddy Deemed to be University</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-label">Graduation:</span>
+                            <span class="highlight-value">2027</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-label">CGPA:</span>
+                            <span class="highlight-value">9.04</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-target="2">0</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-target="10">0</h3>
+                        <p class="stat-label">Technologies</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-target="5">0</h3>
+                        <p class="stat-label">Certifications</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="stat-number" data-target="9">0</h3>
+                        <p class="stat-label">CGPA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Express.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">REST APIs</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Database & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git/GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">DSA & OOP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">AI-Powered Resume Analyzer</h3>
+                        <button class="project-github" onclick="window.open('https://github.com/Begari-Praveen/AI-Powered-Resume-Analyze')" title="View on GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="project-description">
+                        Built an AI-powered resume analyzer with React.js frontend and Node.js/Express.js backend. Features JWT authentication, PDF parsing, AI-driven suggestions using Gemini API, and ATS score calculation.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Gemini API</span>
+                    </div>
+                    <div class="project-features">
+                        <p class="feature">✓ ATS Score Analysis</p>
+                        <p class="feature">✓ AI Resume Suggestions</p>
+                        <p class="feature">✓ JWT Authentication</p>
+                        <p class="feature">✓ Secure Backend Architecture</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">ISP Automation System</h3>
+                        <button class="project-github" onclick="window.open('https://github.com/Begari-Praveen/ISP_Java')" title="View on GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="project-description">
+                        Developed a backend-driven ISP automation system using Java, JDBC, and MySQL for managing customers, internet plans, billing, and payments with complete CRUD operations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">JDBC</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">OOP</span>
+                    </div>
+                    <div class="project-features">
+                        <p class="feature">✓ Customer Management</p>
+                        <p class="feature">✓ Billing System</p>
+                        <p class="feature">✓ CRUD Operations</p>
+                        <p class="feature">✓ OOP Architecture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-content">
+                <div class="education-timeline">
+                    <h3 class="subsection-title">Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>B.Tech Computer Science Engineering</h4>
+                                <p class="timeline-org">Malla Reddy Deemed to be University</p>
+                                <p class="timeline-meta">2023 - 2027 | CGPA: <strong>9.04</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Intermediate MPC</h4>
+                                <p class="timeline-org">Tagore Junior College, Banswada</p>
+                                <p class="timeline-meta">2021 - 2023 | Score: <strong>98.6%</strong></p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>SSC</h4>
+                                <p class="timeline-org">ZPHS Nemli</p>
+                                <p class="timeline-meta">2020 - 2021 | CGPA: <strong>10.0</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications">
+                    <h3 class="subsection-title">Certifications</h3>
+                    <div class="cert-grid">
+                        <div class="cert-card">
+                            <div class="cert-icon">📘</div>
+                            <h4>Microsoft Certified</h4>
+                            <p>Azure AI Fundamentals</p>
+                            <span class="cert-date">Mar 2025</span>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon">🔵</div>
+                            <h4>Google Workspace</h4>
+                            <p>Bring AI to Work Workshop</p>
+                            <span class="cert-date">Feb 2026</span>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon">☕</div>
+                            <h4>Java (Basic)</h4>
+                            <p>HackerRank</p>
+                            <span class="cert-date">Aug 2025</span>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon">🎨</div>
+                            <h4>Responsive Web Design</h4>
+                            <p>freeCodeCamp</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon">🏆</div>
+                            <h4>Cognizant Hackathon</h4>
+                            <p>Participation Certificate</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email</h4>
+                        <a href="mailto:praveenbegari09@gmail.com">praveenbegari09@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📱</div>
+                        <h4>Phone</h4>
+                        <a href="tel:+917286925508">+91 7286925508</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://linkedin.com/in/praveen-begari-1844b934a/" target="_blank">Connect with me</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🐙</div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/Begari-Praveen" target="_blank">View my work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 <span class="gradient-text">Begari Praveen</span>. All Rights Reserved.</p>
+            <p class="footer-subtitle">Designed & Developed with ❤️ | Full Stack Developer</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
